@@ -1,0 +1,274 @@
+<!-- RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Bui Hoang Quynh Chi
+ID: s3978316
+Acknowledgement: Acknowledge the resources that you use here. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Fiction Book</title>
+
+    <link rel="icon" sizes="32x32" href="/assets/svgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/header-footer.css">
+    <link rel="stylesheet" href="/src/styles/list-book.css">
+    <link rel="stylesheet" href="/src/styles/sub-category.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="columns is-mobile">
+          <div class="column header-logo">
+            
+            <a href="/" class="branding">
+              <img src='
+              /assets/svgs/cozy_library.svg
+    ' alt="Cozy Library logo">
+            </a>
+            
+          </div>
+          <div class="column header-search">
+            <div class="toggle-menu">
+              <input type="checkbox" id="toggle-menu">
+              <label for="toggle-menu" class="toggle-open">
+              <a role="button" class="navbar-burger" aria-label="menu"
+                aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </label>
+            <nav>
+              <div>
+                <label for="toggle-menu" class="toogle-close">
+                  <span></span>
+                </label>
+              </div>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/src/pages/about.html">About</a></li>
+                <li><a href="/src/pages/fiction.html">Fiction</a></li>
+                <li><a href="/src/pages/nonfiction.html">Non-Fiction</a></li>
+                <li><a href="/src/pages/contact.html">Contact Us</a></li>
+                <li><a href="/src/pages/privacy-policies.html">Privacy Policies</a></li>
+                <li><a href="/src/pages/terms-of-use.html">Terms of Use</a></li>
+                <li><a href="/src/pages/copyright-policy.html">Copyright Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+    
+    <form id="searchbox" data-controller="Search--compact" data-Search--compact-target="form"
+    class="search-container field has-addons control-search" method="get"
+    autocomplete="off">
+
+    <div class="control is-expanded">
+        <input type="text" value="" class="search-input"
+            placeholder='Search books, authors, ISBNs' name="keywords" autocomplete="off" />
+    </div>
+    <div class="control button-control">
+        <button type="submit" class="search-button">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/search.179df46915b36d0fba2c0ab8f704467e37bb6558.svg
+' title="Search" alt="Search">
+        </button>
+    </div>
+
+    <div data-Search--compact-target="results" tabindex="0"
+    class="box search-results">
+    <div id="hits">
+    </div>
+    <hr/>
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                <span id="stats"></span>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="loading is-hidden" data-Search--compact-target="loadingIndicator">
+                    Loading...
+                </span>
+            </div>
+            <div class="level-item">
+                <a href='#' data-action="click->Search--compact#clear" data-Search--compact-target="clearButton"
+                    class="link">Clear</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</form>
+</div>
+    <div
+    class="column header-actions">
+    <nav class="level is-mobile">
+      <div class="level-left">
+      <div class="level-right">
+        <div class="level-item is-hidden-touch account">
+          <a href="/">
+            
+            
+            Sign In
+            
+          </a>
+        </div>
+        <div class="level-item">
+          <a href="/" class="account-icon">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/user.961000f9a3828a07da2d452f44021f9cfbc4f7b0.svg
+' alt="Account">
+          </a>
+        </div>
+        
+        <div class="level-item">
+          <a href="/" class="cart-link">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/basket.76e8fe7b84404cf9232df8188db62fd33e0c6453.svg
+' alt="Shopping Cart">
+            
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+
+<div class="sub-header">
+      <div class="tabs">
+        <ul class="navbar">
+          
+          
+          <li class="navbar-item">
+            <a href="/">Home</a>
+            
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/about.html">About</a>
+            
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/fiction.html">Fiction</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/nonfiction.html">Non-Fiction</a> 
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    </header>
+
+  <main class="main">
+    <div id="wrapper" data-hook>
+    <div id="lists-container">
+        <section class="col-span-2 section" data-controller="list-carousel">
+        <div>
+        <a class="booklist-title" href="/src/pages/arts-photography.html">Arts & Photography</a>
+        <div class="view">
+          <a class="button callout-button" href="/src/pages/arts-photography.html">View all (3)</a>
+        </div>
+        </div>
+      
+        <div class="linear-product-listing" data-list-carousel-target="carousel">
+          <div class="items">
+            <a class="cover " href="/src/pages/Moonshots-and-Snapshots-of-Project-Apollo:-A-Rare-Photographic-History.html">
+                <div>
+                  <img class="product-image" srcset="https://images-us.bookshop.org/ingram/9780826355942.jpg?height=250&v=v2, https://images-us.bookshop.org/ingram/9780826355942.jpg?height=500&v=v2 1.5x, https://images-us.bookshop.org/ingram/9780826355942.jpg?height=500&v=v2 2x" alt="Moonshots and Snapshots of Project Apollo: A Rare Photographic History" src="https://images-us.bookshop.org/ingram/9780826355942.jpg?height=250&v=v2">
+                  <h3>Moonshots and Snapshots of Project Apollo</h3>
+                  <p>John Bisney , et al.</p>
+              </div>
+            </a>           
+            <a class="cover" href="/src/pages/All-the-Beauty-in-the-World:-The-Metropolitan-Museum-of-Art-and-Me.html">
+                <div>
+                  <img class="product-image" srcset="https://images-us.bookshop.org/ingram/9781982163303.jpg?height=250&v=v2-958474bc632ff7e60bfb4afea9e58c08, https://images-us.bookshop.org/ingram/9781982163303.jpg?height=500&v=v2-958474bc632ff7e60bfb4afea9e58c08 1.5x, https://images-us.bookshop.org/ingram/9781982163303.jpg?height=500&v=v2-958474bc632ff7e60bfb4afea9e58c08 2x" alt="All the Beauty in the World: The Metropolitan Museum of Art and Me" src="https://images-us.bookshop.org/ingram/9781982163303.jpg?height=250&v=v2-958474bc632ff7e60bfb4afea9e58c08">
+                  <h3>The Metropolitan Museum of Art and Me</h3>
+                  <p>Patrick Bringley</p>
+              </div>    
+            </a>             
+         <a class="cover" href="/src/pages/Woody-Gutherie.html">
+                <div>
+                    <img class="product-image" srcset="https://images-us.bookshop.org/ingram/9781797211787.jpg?height=250&v=v2, https://images-us.bookshop.org/ingram/9781797211787.jpg?height=500&v=v2 1.5x, https://images-us.bookshop.org/ingram/9781797211787.jpg?height=500&v=v2 2x" alt="Woody Guthrie: Songs and Art * Words and Wisdom" src="https://images-us.bookshop.org/ingram/9781797211787.jpg?height=250&v=v2">
+                    <h3>Woody Guthrie: Songs and Art * Words and Wisdom</h3>
+                    <p>Nora Guthrie , et al.</p>
+              </div>
+        </a>  
+    </div>
+          <div class="prev">
+            <img src="https://rails-assets-us.bookshop.org/assets/ic_fat_arrow_left-78d4b37e9bbb5fee5ded46062f2acb0558ea2c52e03e1d4cf00fe7c668c48dac.svg" alt="Previous Icon">
+          </div>
+          <div class="next">
+            <img src="https://rails-assets-us.bookshop.org/assets/ic_fat_arrow_right-8cd117ef71cad1e27c159d775f4d2d0a806c8f173deb5be52b4a6dacc7fdfa0d.svg" alt="Next Icon">
+          </div>
+        </div>
+      </section>
+  
+      
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+    <div class="col-sm-12">
+    <div class="row">
+    <div class="col-sm-3">
+    <h4>Company</h4>
+    <ul class="list-unstyled text-center">
+      <li class="list-inline-item"><a href="/src/pages/about.html">About Us</a></li>
+    <li><a href="/src/pages/contact.html">Contact Us</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-3">
+    <h4>Policies</h4>
+    <ul class="list-unstyled text-center">
+    <li><a href="/src/pages/privacy-policies.html">Privacy Policies</a></li>
+    <li><a href="/src/pages/terms-of-use.html">Terms of Use</a></li>
+    <li><a href="/src/pages/copyright-policy.html">Copyright Policy</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-3">
+    <h4>You can pay through</h4>
+    <div id="nbs-pay-imgs">
+    <ul class="list-unstyled text-center">
+            <img src="/assets/img/payment-visa.gif" alt="Visa" width="60" height="40"/>
+            <img src="/assets/img/payment-mastercard.gif" alt="Mastercard" width="60" height="40"/>
+            <img src="/assets/img/partner-ecpay.gif" alt="Ecpay" width="60" height="40"/>
+            <img src="/assets/img/payment-cod.gif" alt="Cod" width="60" height="40"/>
+            <img src="/assets/img/payment-bank-deposit.gif" alt="Deposit" width="60" height="40"/>
+            <img src="/assets/img/partner-gcash.gif" alt="Gcash" width="60" height="40"/>
+            <img src="/assets/img/payment-bayad-center.gif" alt="Bayad" width="60" height="40"/>
+            <img src="/assets/img/grabpay.jpg" alt="Grabpay" width="60" height="40"/>
+            <img src="/assets/img/shopee-pay.jpg" alt="Shopeepay" width="60" height="40"/>
+    </ul>
+    </div>
+    </div>
+    </div>
+    
+    <ul class="list-unstyled icons list-inline text-center">
+    <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/facebook.png" alt="Facebook" width="32" height="32"></a></li>
+    <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/twitter.png" alt="Twitter" width="32" height="32"></a></li>
+    <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/linkedin.png" alt="Linkedin" width="32" height="32"></a></li>
+    <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/pinterest.png" alt="Pinterest" width="32" height="32"></a></li>
+    <li class="list-inline-item"><a target="_blank" href="/"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/youtube.png" alt="Youtube" width="32" height="32"></a></li>
+    <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/instagram.png" alt="Instagram" width="32" height="32"></a></li></ul>
+    </div>
+    
+    
+    </div>
+    <div class="row">
+     <div class="col-md-12 copyrighttext">
+    Copyright © 2023 . CozyLibrary.com. <span class="allrightreserve">All Rights Reserved</span>
+    </div>
+    </div>
+    </footer>
+</body>
+</html>

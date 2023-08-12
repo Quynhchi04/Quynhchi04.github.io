@@ -1,0 +1,273 @@
+<!-- RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 1
+Author: Bui Hoang Quynh Chi
+ID: s3978316
+Acknowledgement: Acknowledge the resources that you use here. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea of Tranquility</title>
+
+    <link rel="icon" sizes="32x32" href="/assets/svgs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/src/styles/header-footer.css">
+    <link rel="stylesheet" href="/src/styles/book-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="columns is-mobile">
+          <div class="column header-logo">
+            
+            <a href="/" class="branding">
+              <img src='
+              /assets/svgs/cozy_library.svg
+    ' alt="Cozy Library logo">
+            </a>
+            
+          </div>
+          <div class="column header-search">
+            <div class="toggle-menu">
+              <input type="checkbox" id="toggle-menu">
+              <label for="toggle-menu" class="toggle-open">
+              <a role="button" class="navbar-burger" aria-label="menu"
+                aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </label>
+            <nav>
+              <div>
+                <label for="toggle-menu" class="toogle-close">
+                  <span></span>
+                </label>
+              </div>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/src/pages/about.html">About</a></li>
+                <li><a href="/src/pages/fiction.html">Fiction</a></li>
+                <li><a href="/src/pages/nonfiction.html">Non-Fiction</a></li>
+                <li><a href="/src/pages/contact.html">Contact Us</a></li>
+                <li><a href="/src/pages/privacy-policies.html">Privacy Policies</a></li>
+                <li><a href="/src/pages/terms-of-use.html">Terms of Use</a></li>
+                <li><a href="/src/pages/copyright-policy.html">Copyright Policy</a></li>
+              </ul>
+            </nav>
+          </div>
+    
+    <form id="searchbox" data-controller="Search--compact" data-Search--compact-target="form"
+    class="search-container field has-addons control-search" method="get"
+    autocomplete="off">
+
+    <div class="control is-expanded">
+        <input type="text" value="" class="search-input"
+            placeholder='Search books, authors, ISBNs' name="keywords" autocomplete="off" />
+    </div>
+    <div class="control button-control">
+        <button type="submit" class="search-button">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/search.179df46915b36d0fba2c0ab8f704467e37bb6558.svg
+' title="Search" alt="Search">
+        </button>
+    </div>
+
+    <div data-Search--compact-target="results" tabindex="0"
+    class="box search-results">
+    <div id="hits">
+    </div>
+    <hr/>
+    <div class="level">
+        <div class="level-left">
+            <div class="level-item">
+                <span id="stats"></span>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="loading is-hidden" data-Search--compact-target="loadingIndicator">
+                    Loading...
+                </span>
+            </div>
+            <div class="level-item">
+                <a href='#' data-action="click->Search--compact#clear" data-Search--compact-target="clearButton"
+                    class="link">Clear</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</form>
+</div>
+    <div
+    class="column header-actions">
+    <nav class="level is-mobile">
+      <div class="level-left">
+      <div class="level-right">
+        <div class="level-item is-hidden-touch account">
+          <a href="/">
+            
+            
+            Sign In
+            
+          </a>
+        </div>
+        <div class="level-item">
+          <a href="/" class="account-icon">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/user.961000f9a3828a07da2d452f44021f9cfbc4f7b0.svg
+' alt="Account">
+          </a>
+        </div>
+        
+        <div class="level-item">
+          <a href="/" class="cart-link">
+            <img src='
+https://rails-assets-us.bookshop.org/ds/images/basket.76e8fe7b84404cf9232df8188db62fd33e0c6453.svg
+' alt="Shopping Cart">
+            
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+
+<div class="sub-header">
+      <div class="tabs">
+        <ul class="navbar">
+          
+          
+          <li class="navbar-item">
+            <a href="/">Home</a>
+            
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/about.html">About</a>
+            
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/fiction.html">Fiction</a>
+          </li>
+          
+          <li class="navbar-item">
+            <a href="/src/pages/nonfiction.html">Non-Fiction</a> 
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    </header>
+    <main>
+    <div class="container">
+    <div class="grid second-nav">
+        <div class="column-xs-12">
+          <nav>
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/src/pages/fiction.html">Fiction</a></li>
+              <li class="breadcrumb-item active">Sea of Tranquility</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <div class="grid product">
+        <div class="column-lg-8">
+          <div class="product-gallery">
+            <div class="product-image column-lg-6">
+              <img class="active" alt="Sea of Tranquility" src="https://images-us.bookshop.org/ingram/9780593321447.jpg?height=500&v=v2">
+            </div>
+            <ul class="image-list column-lg-2">
+              <li class="image-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPygcqMEyzN1C9JwAyD2CgRtxlh2LfCiEQ5H6VYf9UrhmIXIcOK8BlKnKjYbEgnx86k_A&usqp=CAU" alt="description pic 1"></li>
+              <li class="image-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpmuy8SBBYvW2QuZAWRtsFOqn586ni0eiNlfjy70ZFtPOsRXOEMSs_RTn3i6z4JQqD-d8&usqp=CAU" alt="description pic 2"></li>
+              <li class="image-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZyyQ7Rg5M5rAqvpEGxGKNunD4_lqbkYAsHudPU0hm6gclQJ8jdBZQjtz1zM-M4DNRjI&usqp=CAU" alt="description pic 3"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="column-lg-4">
+          <h2>$17.67</h2>
+          <button class="add-to-cart">Add To Cart</button>
+        </div>
+        <div>
+          <h2 class="book-name">Sea of Tranquility</h2>
+          <div class="description">
+            <p><strong>NEW YORK TIMES BESTSELLER - The award-winning, best-selling author of Station Eleven and The Glass Hotel returns with a novel of art, time travel, love, and plague that takes the reader from Vancouver Island in 1912 to a dark colony on the moon five hundred years later, unfurling a story of humanity across centuries and space.</strong></p>
+            <p>One of the Best Books of the Year: The New York Times, NPR, GoodReads</p>
+            <p>"One of [Mandel's] finest novels and one of her most satisfying forays into the arena of speculative fiction yet." --The New York Times</p>
+                <p>Edwin St. Andrew is eighteen years old when he crosses the Atlantic by steamship, exiled from polite society following an ill-conceived diatribe at a dinner party. He enters the forest, spellbound by the beauty of the Canadian wilderness, and suddenly hears the notes of a violin echoing in an airship terminal--an experience that shocks him to his core.
+                </p>
+                <p>Two centuries later a famous writer named Olive Llewellyn is on a book tour. She's traveling all over Earth, but her home is the second moon colony, a place of white stone, spired towers, and artificial beauty. Within the text of Olive's best-selling pandemic novel lies a strange passage: a man plays his violin for change in the echoing corridor of an airship terminal as the trees of a forest rise around him.
+                    </p>
+                    <p>When Gaspery-Jacques Roberts, a detective in the black-skied Night City, is hired to investigate an anomaly in the North American wilderness, he uncovers a series of lives upended: The exiled son of an earl driven to madness, a writer trapped far from home as a pandemic ravages Earth, and a childhood friend from the Night City who, like Gaspery himself, has glimpsed the chance to do something extraordinary that will disrupt the timeline of the universe.</p>
+                    <p>A virtuoso performance that is as human and tender as it is intellectually playful, Sea of Tranquility is a novel of time travel and metaphysics that precisely captures the reality of our current moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+        <div class="col-sm-12">
+        <div class="row">
+        <div class="col-sm-3">
+        <h4>Company</h4>
+        <ul class="list-unstyled text-center">
+          <li class="list-inline-item"><a href="/src/pages/about.html">About Us</a></li>
+        <li><a href="/src/pages/contact.html">Contact Us</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-3">
+        <h4>Policies</h4>
+        <ul class="list-unstyled text-center">
+        <li><a href="/src/pages/privacy-policies.html">Privacy Policies</a></li>
+        <li><a href="/src/pages/terms-of-use.html">Terms of Use</a></li>
+        <li><a href="/src/pages/copyright-policy.html">Copyright Policy</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-3">
+        <h4>You can pay through</h4>
+        <div id="nbs-pay-imgs">
+        <ul class="list-unstyled text-center">
+                <img src="/assets/img/payment-visa.gif" alt="Visa" width="60" height="40"/>
+                <img src="/assets/img/payment-mastercard.gif" alt="Mastercard" width="60" height="40"/>
+                <img src="/assets/img/partner-ecpay.gif" alt="Ecpay" width="60" height="40"/>
+                <img src="/assets/img/payment-cod.gif" alt="Cod" width="60" height="40"/>
+                <img src="/assets/img/payment-bank-deposit.gif" alt="Deposit" width="60" height="40"/>
+                <img src="/assets/img/partner-gcash.gif" alt="Gcash" width="60" height="40"/>
+                <img src="/assets/img/payment-bayad-center.gif" alt="Bayad" width="60" height="40"/>
+                <img src="/assets/img/grabpay.jpg" alt="Grabpay" width="60" height="40"/>
+                <img src="/assets/img/shopee-pay.jpg" alt="Shopeepay" width="60" height="40"/>
+        </ul>
+        </div>
+        </div>
+        </div>
+        
+        <ul class="list-unstyled icons list-inline text-center">
+        <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/facebook.png" alt="Facebook" width="32" height="32"></a></li>
+        <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/twitter.png" alt="Twitter" width="32" height="32"></a></li>
+        <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/linkedin.png" alt="Linkedin" width="32" height="32"></a></li>
+        <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/pinterest.png" alt="Pinterest" width="32" height="32"></a></li>
+        <li class="list-inline-item"><a target="_blank" href="/"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/youtube.png" alt="Youtube" width="32" height="32"></a></li>
+        <li class="list-inline-item"><a href="/" target="_blank"><img src="https://d2g9wbak88g7ch.cloudfront.net/staticimages/instagram.png" alt="Instagram" width="32" height="32"></a></li></ul>
+        </div>
+        
+        
+        </div>
+        <div class="row">
+         <div class="col-md-12 copyrighttext">
+        Copyright © 2023 . CozyLibrary.com. <span class="allrightreserve">All Rights Reserved</span>
+        </div>
+        </div>
+        </footer>
+    </body>
+    </html>

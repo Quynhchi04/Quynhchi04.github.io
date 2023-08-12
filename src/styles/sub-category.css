@@ -1,0 +1,7 @@
+/* Media query for cover class */
+@media (min-width: 768px) {
+    .cover {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
